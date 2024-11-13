@@ -104,7 +104,8 @@ class _HomeUIState extends State<HomeUI> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => UpdateProfileUI(member: widget.member),
+                    builder: (context) =>
+                        UpdateProfileUI(member: widget.member),
                   ),
                 ).then((value) {
                   //ตรวจสอบก่อนว่าเมื่อย้อนกลับมาหน้านี้มีการส่งข้อมูลมาด้วยหรือไม่
@@ -158,7 +159,9 @@ class _HomeUIState extends State<HomeUI> {
                                       });
                                     });
                                   },
-                                  tileColor: index % 2 == 0 ? Colors.red[50] : Colors.green[50],
+                                  tileColor: index % 2 == 0
+                                      ? Colors.red[50]
+                                      : Colors.green[50],
                                   leading: ClipRRect(
                                     child: Image.network(
                                       '${Env.hostName}/mydiaryfood/picupload/food/${snapshot.data![index].foodImage}',
